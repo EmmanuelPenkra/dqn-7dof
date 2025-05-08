@@ -1,0 +1,40 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Virtual environment
+venv/
+mujoco-env/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode and PyCharm settings
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Mujoco model files / caches
+*.log
+*.xml~
+*.urdf~
+*.mjcf~
+
+# Model repository (optional: ignore if you clone mujoco_menagerie inside your repo)
+mujoco_menagerie/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Pip dependency cache
+pip-wheel-metadata/
+*.egg
+*.whl

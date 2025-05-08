@@ -1,0 +1,7 @@
+numpy
+mujoco>=3.1.1
+gymnasium
+torch
+matplotlib
+opencv-python
+pandas
