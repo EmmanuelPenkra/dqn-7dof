@@ -1,6 +1,5 @@
 Sample batch job:
 
-
 #!/bin/bash
 
 #SBATCH --account=advdls25
@@ -14,8 +13,6 @@ Sample batch job:
 #SBATCH --time=02:00:00 # 8 hours
 #SBATCH --output=ropeflash_%j.out
 #SBATCH --error=ropeflash_%j.err
-
-
 
 echo "CUDA_VISIBLE_DEVICES:" $CUDA_VISIBLE_DEVICES
 nvidia-smi -L

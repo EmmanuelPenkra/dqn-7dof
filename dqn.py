@@ -24,6 +24,7 @@ class QNetwork(nn.Module):
         super(QNetwork, self).__init__()
         self.seed = torch.manual_seed(seed)
         # Paper: Input Layer (7) -> FC (128, ReLU) -> FC (256, ReLU) -> FC (2187)
+        
         self.fc1 = nn.Linear(state_size, 128)
         self.fc2 = nn.Linear(128, 256)
         self.fc3 = nn.Linear(256, action_size)

@@ -25,14 +25,13 @@ os.makedirs(os.path.join(MODEL_DIR, ALG_NAME), exist_ok=True)
 
 # fixed goals for quick evaluation
 EVAL_GOALS = [
-    np.array([0.3, 0.2, 0.5], dtype=np.float32), # Slightly adjusted to be more reachable
+    np.array([0.3, 0.2, 0.5], dtype=np.float32),
     np.array([0.25, 0.1, 0.4], dtype=np.float32),
     np.array([0.35, 0.3, 0.55], dtype=np.float32),
 ]
 
 # CSV log path
 LOG_CSV = os.path.join(LOG_DIR, f"{ALG_NAME}_training_log.csv")
-
 
 def train(env_id: str, alg_name_for_dir: str):
     env = SawyerIKEnv()
@@ -52,7 +51,7 @@ def train(env_id: str, alg_name_for_dir: str):
     agent_state_size = 7 # Sawyer joint angles
     agent = DQNAgent(state_size=agent_state_size,
                      action_size=env.action_space.n,
-                     seed=0, # For reproducibility
+                     seed=0,
                      hyperparams=hyperparams)
 
     MAX_EPISODES = 20000 # Increased episodes
